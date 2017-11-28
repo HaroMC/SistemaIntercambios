@@ -3,7 +3,7 @@
          pageEncoding="UTF-8"
          import="cem.modelo.entidad.Usuario" 
          session="true" %>
-        
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,13 +18,12 @@
         <%
             /**
              * Código que verifica si el usuario en sesión puede visitar esta
-             * página. De no tener permiso, se le redirecciona a la página
-             * "no autorizado".
+             * página. De no tener permiso, se le redirecciona a la página "no
+             * autorizado".
              */
             if (session.getAttribute("usuarioActual") == null) {
                 response.sendRedirect("no-autorizado.html");
-            }
-            else {
+            } else {
                 if (((Usuario) session.getAttribute("usuarioActual"))
                         .getPerfil()
                         .compareToIgnoreCase("Administrador") != 0) {
@@ -45,32 +44,45 @@
                         <th>Nombre del programa al que postula</th>
                         <th>Postulantes</th>
                         <th>Estado</th>
+                        <th>Fecha</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
                     <tr>
-                        <td>Desarrollo en MEAN</td>
-                        <td>Universidad de Cataluña</td>
-                        <th>Aceptado</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                Aceptar
+                            </button></td>
                     </tr>
                     <tr>
-                        <td>Gestion de Personas</td>
-                        <td>Universidad de Colombia</td>
-                        <th>Rechazado</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>Desarrollo en MEAN</td>
-                        <td>Universidad de Toronto</td>
-                        <th>Aceptado</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>   
+                    <tr>
+
+
+                    </tr>
                 </tbody>
             </table>
-            <button type="button" class="btn btn-primary">
-                Aceptar
-            </button>
-            <button type="button" class="btn btn-primary">
-                Rechazar
-            </button>
+            <!--
+                        <button type="button" class="btn btn-primary">
+                            Rechazar
+                        </button>
+            -->
         </div>
     </body>
     <script>

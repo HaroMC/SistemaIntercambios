@@ -33,9 +33,9 @@
             }
         %>
         <%@include file="menuCEM.jsp" %>
-        <h1>Postulasiones de los alumnos a los programas</h1>
+        
         <div class="container">
-            <h2>Alumnos que estan postulando</h2>      
+            <h1>Postulasiones de los alumnos a los programas</h1>
             <p>Filtra tu busqueda aqui:</p>
             <input class="form-control" id="myInput" type="text" placeholder="Escribe aca lo que buscas..">
             <br>
@@ -43,34 +43,47 @@
                 <thead>
                     <tr>
                         <th>Nombre del programa al que postula</th>
-                        <th>Postulante</th>
+                        <th>Postulantes</th>
                         <th>Estado</th>
+                        
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
                     <tr>
-                        <td>Desarrollo en MEAN</td>
-                        <td>Juanito Perez</td>
-                        <th>Aceptado</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                        <td><button type="button" class="btn btn-primary">
+                                Aceptar
+                            </button></td>
                     </tr>
                     <tr>
-                        <td>Gestion de Personas</td>
-                        <td>Daniela Sepulveda</td>
-                        <th>Rechazado</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>Desarrollo en MEAN</td>
-                        <td>Sebastian Barrenechea</td>
-                        <th>Aceptado</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                        <td></td>
                     </tr>   
+                    <tr>
+
+
+                    </tr>
                 </tbody>
             </table>
-            <button type="button" class="btn btn-primary">
-                Aceptar
-            </button>
-            <button type="button" class="btn btn-primary">
-                Rechazar
-            </button>
+            <!--
+                        <button type="button" class="btn btn-primary">
+                            Rechazar
+                        </button>
+            -->
         </div>
     </body>
     <script>
