@@ -123,6 +123,7 @@ public class DaoEntidades {
             ps = c.prepareStatement(sql);
             ps.setString(1, rut);
             ps.executeUpdate();
+            c.commit();
             ps.close();
             c.close();
             conexion.cerrar();
@@ -134,6 +135,26 @@ public class DaoEntidades {
         }
         return resultado;
     }
+    
+    public void eliminarPersona_2(String codigo) throws SQLException {
+        PreparedStatement stmt = null;
+        String consulta = "DELETE FROM CEM.PERSONA WHERE RUT = ?";
+        try {
+            Conexion c = new Conexion();
+            Connection con = c.abrir();
+            stmt = con.prepareStatement(consulta);
+            stmt.setString(1, codigo);
+
+            stmt.executeUpdate();
+        } catch (SQLException se) {
+            se.printStackTrace();
+        } finally {
+            if (stmt != null) {
+                stmt.close();
+            }
+        }
+    }
+    
     
     private boolean modificarPersona(String rut, String nombreCompleto,
             Date fechaNacimiento, String domicilio, String ciudad, String pais,

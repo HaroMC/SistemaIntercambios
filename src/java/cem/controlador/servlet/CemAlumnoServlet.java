@@ -25,10 +25,13 @@ public class CemAlumnoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
+        
         String accion = request.getParameter("accion");
+        
         if (accion != null) {
+            
             if (accion.compareToIgnoreCase("eliminar") == 0) {
-                String rut = request.getParameter("rutBusqueda");
+                String rut = request.getParameter("rutSeleccionado");
                 if (dao.eliminarPersona(rut)) {
                     request.setAttribute("mensaje", "Alumno eliminado.");
                     request.getRequestDispatcher(
@@ -38,10 +41,6 @@ public class CemAlumnoServlet extends HttpServlet {
             }
         }
         else {
-            
-            // Definir que tipo de usuario es para redfireccionarlo a la página
-            // que corresponda.
-            
             String perfil = 
                     ((Usuario) request.getSession()
                     .getAttribute("usuarioActual")).getPerfil();

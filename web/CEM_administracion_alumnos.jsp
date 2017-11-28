@@ -48,7 +48,8 @@
         <div class="container">
             <h2>Alumnos existentes</h2>      
             <p>Si necesitas buscar un Alumno en especifico puedes hacerlo aqui:</p>
-            <input class="form-control" id="myInput" type="text" placeholder="Escribe aca lo que buscas..">
+            <input class="form-control" id="myInput" type="text"
+                   placeholder="Escribe aca lo que buscas..">
             <br/>
             <table class="table table-bordered table-striped">
                 <thead>
@@ -61,7 +62,6 @@
                         <th>Ver Datos</th>
                     </tr>
                 </thead>
-                <!--<form action="cem-alumnos?accion=eliminar" method="get">-->
                 <tbody id="myTable">
                     <c:forEach var="p" items="${listadoAlumnos}">
                         <tr>
@@ -70,31 +70,33 @@
                             <td> <c:out value="${p.usuario.nombre}" /> </td>
                             <td> <c:out value="${p.telefono}" /> </td>
                             <td>
-                                <input type="hidden"
-                                       value="<c:out value="${p.rut}"/>"
-                                       name="rutBusqueda"/>
+                                <form action="ProcesaBusquedaRut" method="get">
+                                    <input type="hidden"
+                                           value="<c:out value="${p.rut}"/>"
+                                           name="rutSeleccionado"/>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="glyphicon glyphicon-minus"></i>
+                                    </button>
+                                </form>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-primary">
-                                    <i class="glyphicon glyphicon-minus"></i>
-                                </button>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-primary">
-                                    <i class="">Ver notas</i>
-                                </button>
+                                <form action="#" method="get">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="">Ver notas</i>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     </c:forEach>
                 </tbody>
             </table>
-            <!--</form>-->
         </div>
 
         <div class="container">
             <h2>Notas por asignaturas segun programa</h2>                
             <p>Si necesitas buscar algo especifico puedes hacerlo aqui:</p>
-            <input class="form-control" id="myInput2" type="text" placeholder="Escribe aca lo que buscas..">
+            <input class="form-control" id="myInput2" type="text"
+                   placeholder="Escribe aca lo que buscas..">
             <br/>
             <table class="table table-bordered table-striped">
                 <thead>
