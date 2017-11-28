@@ -44,13 +44,7 @@
                                placeholder="Ingrese el nombre del programa" required="">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Fecha Inicio</label>
-                    <div class="col-sm-5">
-                        <input type="date" class="form-control" name="fechaInicio" 
-                               required="">
-                    </div>
-                </div>
+               
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Fecha Término</label>
                     <div class="col-sm-5">
