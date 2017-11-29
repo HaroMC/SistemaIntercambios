@@ -114,6 +114,10 @@ public class DaoEntidades {
         return resultado;
     }
     
+    /* Profesor cualquiera de estos dos metodos eliminar persona se caen,
+    con cualquiera de los dos que funcionara nos serve.
+    */
+    
     public boolean eliminarPersona(String rut) {
         boolean resultado = false;
         String sql = "DELETE FROM CEM.PERSONA WHERE RUT = ?";

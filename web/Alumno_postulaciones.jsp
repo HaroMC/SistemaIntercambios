@@ -30,7 +30,8 @@
                 <thead>
                     <tr>
                         <th>Codigo</th>
-                        <th>Nombre</th>            
+                        <th>Nombre</th>  
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="myTable2">
@@ -38,13 +39,12 @@
                         <tr>
                             <td> <c:out value="${p.codigo}" /> </td>
                             <td> <c:out value="${p.nombre}" /> </td>
-                        </tr>
-                    </c:forEach>
+                            <td><button type="button" class="btn btn-primary">Postular</button></td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
-            <button type="button" class="btn btn-primary">
-                Postular
-            </button>
+
         </div>
 
 

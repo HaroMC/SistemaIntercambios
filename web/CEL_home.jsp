@@ -36,71 +36,7 @@
             }
         %>
         <%@include file="menuCEL.jsp" %>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Datos del Cel</h3>
-            </div>
-            <div class="panel-body">
-                Aqui van los datos del cel
-            </div>
-            <div class="container">
-                <h2>Programas</h2>           
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>Mary</td>
-                            <td>Moe</td>
-                            <td>mary@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>July</td>
-                            <td>Dooley</td>
-                            <td>july@example.com</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="container">
-                <h2>Asignaturas</h2>           
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>Mary</td>
-                            <td>Moe</td>
-                            <td>mary@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>July</td>
-                            <td>Dooley</td>
-                            <td>july@example.com</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <h1>info del cel mas una imagen, todo debe quedar centrado, imagen a la izquierda e informacion a la derecha</h1>
 
     </body>
 </html>

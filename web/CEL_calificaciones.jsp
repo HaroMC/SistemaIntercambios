@@ -19,41 +19,51 @@
     <body>
         <%@include file="menuCEL.jsp" %>
         <div class="container">
-            <h2>tablas con datos de Programas </h2>           
+            <h2>Para colocar una calificacion selecciona un programa</h2>      
+            <p>Filtra tu busqueda aqui:</p>
+            <input class="form-control" id="myInput" type="text" placeholder="Escribe aca lo que buscas..">
+            <br>
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
+                        <th>Nombre del programa </th>
+                        <th>Asignatura</th>
+                        <th></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                     <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                Selecccionar
+                            </button></td>
                     </tr>
                     <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                    </tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>             
                 </tbody>
             </table>
+            <!--
+                        <button type="button" class="btn btn-primary">
+                            Rechazar
+                        </button>
+            -->
         </div>
         <div class="container">
-            <h2>Notas por Asignatura</h2>           
+            <h2>Notas por asignaturas segun programa</h2>                
+            <p>Si necesitas buscar algo especifico puedes hacerlo aqui:</p>
+            <input class="form-control" id="myInput2" type="text"
+                   placeholder="Escribe aca lo que buscas..">
+            <br/>
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>Nombre  Alumno</th>
+                        <th>Nombre  Completo</th>
                         <th>Programa</th>
+                        <th>Estado</th>
                         <th>Asignatura</th>
                         <th>Nota 1</th>
                         <th>Nota 2</th>
@@ -61,46 +71,69 @@
                         <th>Nota Final</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable2">
                     <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
+                        <td>Cecilia Fernanda Moreno Lira</td>
+                        <td>Programa1</td>  
+                        <td>Terminado</td>
+                        <td>Asignatura 1</td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Asignatura 2</td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Asignatura 3</td> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Cecilia Fernanda Moreno Lira</td>
+                        <td>Programa2</td>  
+                        <td>Cursando</td>
+                        <td>Asignatura 1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Asignatura 2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Asignatura 3</td> 
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                 </tbody>
-            </table>
-            <button type="button" class="btn btn-primary">
-                <i class="glyphicon glyphicon-plus"></i>
-            </button>
-            <button type="button" class="btn btn-primary">
-                <i class="glyphicon glyphicon-pencil"></i>
-            </button>
-             <button type="button" class="btn btn-primary">
-                <i class="glyphicon glyphicon-minus"></i>
-            </button>
-            
+            </table>           
         </div>
 
     </body>
