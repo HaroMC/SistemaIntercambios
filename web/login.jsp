@@ -16,48 +16,49 @@
         <!--Link J.S.-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous"> </script>
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloFinal.css">
     </head>
     <body>
         <%/*
-            if ((Usuario) session.getAttribute("usuarioAcual") != null) {
-                String perfil = ((Usuario) session
-                        .getAttribute("usuarioActual"))
-                        .getPerfil();
+             if ((Usuario) session.getAttribute("usuarioAcual") != null) {
+             String perfil = ((Usuario) session
+             .getAttribute("usuarioActual"))
+             .getPerfil();
 
-                if (perfil.compareToIgnoreCase("Administrador") == 0) {
-                    response.sendRedirect("menuCEM.jsp");
-                }
-                else {
-                    if (perfil.compareToIgnoreCase("CEL") == 0) {
-                        response.sendRedirect("CEL_home.jsp");
-                    }
-                    else {
-                        if (perfil.compareToIgnoreCase("Alumno") == 0) {
-                            response.sendRedirect("Alumno_perfil.jsp");
-                        }
-                        else {
-                            if (perfil.compareToIgnoreCase("Familia") == 0) {
-                                response.sendRedirect("Familia_perfil.jsp");
-                            }
-                        }
-                    }
-                }
-            }*/
+             if (perfil.compareToIgnoreCase("Administrador") == 0) {
+             response.sendRedirect("menuCEM.jsp");
+             }
+             else {
+             if (perfil.compareToIgnoreCase("CEL") == 0) {
+             response.sendRedirect("CEL_home.jsp");
+             }
+             else {
+             if (perfil.compareToIgnoreCase("Alumno") == 0) {
+             response.sendRedirect("Alumno_perfil.jsp");
+             }
+             else {
+             if (perfil.compareToIgnoreCase("Familia") == 0) {
+             response.sendRedirect("Familia_perfil.jsp");
+             }
+             }
+             }
+             }
+             }*/
         %>
-        <h1>
-            Sistema de intercambios estudiantiles
-            <br />
-            Centro de Estudios Montreal
-        </h1>
+
+        <!--
         <div class="container">
+            
+            
+            
             <div class="row vertical-offset-100">
-                <div class="panel panel-default">
+                <div class="panel panel-default" style="width: 850px">
                     <!--
                     <div class="panel-heading">
                         <h3 class="panel-title"> Ingrese al sistema :)</h3>
                     </div>
-                    -->
+                    
                     <div class="panel-body">
                         <form class="form-horizontal" action="ingresar" method="post">
                             <fieldset>
@@ -84,16 +85,13 @@
                                     </div>
                                 </div>   
                                 <h5>Si no estas registrado y eres alumno o familia anfitriona elije una opcion</h5>
-                                <div class="row">
-                                    <div class="col-xs-3 col-sm-6 col-md-6">
-                                        <a href="registro/alumno.jsp" class="btn btn-lg btn-primary btn-block">Si eres alumno matriculado, regístrate aquí</a>
-                                    </div>                                  
-                                </div>
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">
+                                    <a href="registro/alumno.jsp" class="btn btn-lg btn-primary btn-block">Si eres alumno matriculado, regístrate aquí</a>
+                                </button>
                                 <br/>   
-                                <div class="row">
-                                    <div class="col-xs-3 col-sm-6 col-md-6">
-                                        <a href="registro/familia.jsp" class="btn btn-lg btn-primary btn-block">Si deseas ser una familia anfitriona, regístrate aquí</a>
-                                    </div>   
+                                <button
+                                    <a href="registro/familia.jsp" class="btn btn-lg btn-primary btn-block">Si deseas ser una familia anfitriona, regístrate aquí</a>
+                                </button>
                                 </div>
                                 <label> ${mensaje} </label>         
                             </fieldset>
@@ -101,6 +99,30 @@
                     </div>
                 </div>
             </div>
-        </div>
+            -->
+                            <!-- login copiado-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-md-offset-4">
+                        <h1 class="text-center login-title">Sign in to continue to Bootsnipp</h1>
+                        <div class="account-wall">
+                            <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                                 alt="">
+                            <form class="form-signin" action="ingresar" method="post">
+                                <input type="text" class="form-control" placeholder="User name" name="nombreUsuario" required autofocus>
+                                <input type="password" class="form-control" placeholder="Password" name="contrasena" required>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                    Sign in</button>
+                                <label class="checkbox pull-left">
+                                    <input type="checkbox" value="remember-me">
+                                    Remember me
+                                </label>
+                                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                            </form>
+                        </div>
+                        <a href="#" class="text-center new-account">Create an account </a>
+                    </div>
+                </div>
+            </div>
     </body>
 </html>
