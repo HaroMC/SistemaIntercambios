@@ -3,12 +3,22 @@
          language="java"
          import="cem.modelo.entidad.Usuario" 
          session="true" %>
-
-<%  if (session.getAttribute("usuarioActual") == null) {
-        response.sendRedirect("no-autorizado.html");
-    }
-%>
-
+   <%
+            /**
+             * Código que verifica si el usuario en sesión puede visitar esta
+             * página. De no tener permiso, se le redirecciona a la página "no
+             * autorizado".
+             */
+            if (session.getAttribute("usuarioActual") == null) {
+                response.sendRedirect("no-autorizado.html");
+            } else {
+                if (((Usuario) session.getAttribute("usuarioActual"))
+                        .getPerfil()
+                        .compareToIgnoreCase("CEL") != 0) {
+                    response.sendRedirect("no-autorizado.html");
+                }
+            }
+        %>
 <!DOCTYPE html>
 <html>
     <head>

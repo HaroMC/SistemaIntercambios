@@ -41,6 +41,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="Alumno_perfil.jsp"> Perfil </a></li>                    
                     <li><a href="alumnos-programas"> Postulaciones </a></li>
+                    <li><a href="Alumno_selecciona_familia.jsp"> Seleccion de familia </a></li>
                 </ul>
                 <label class="nav navbar-nav navbar-right label label-default" style="color: white; width: 10%; height: 50px">
                     <br/>

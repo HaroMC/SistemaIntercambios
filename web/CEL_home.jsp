@@ -4,6 +4,7 @@
          language="java"
          session="true"
          import="cem.modelo.entidad.Usuario" %>
+ <%@include file="menuCEL.jsp" %>
 
 <!DOCTYPE html>
 <html>
@@ -13,30 +14,22 @@
         <!-- Link Bootstrap CSS -->
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
         <!--Link J.S.-->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous"> </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloFinal.css">
     </head>
     <body>
-        <%
-            /**
-             * Código que verifica si el usuario en sesión puede visitar esta
-             * página. De no tener permiso, se le redirecciona a la página
-             * "no autorizado".
-             */
-            if (session.getAttribute("usuarioActual") == null) {
-                response.sendRedirect("no-autorizado.html");
-            }
-            else {
-                if (((Usuario) session.getAttribute("usuarioActual"))
-                        .getPerfil()
-                        .compareToIgnoreCase("CEL") != 0) {
-                    response.sendRedirect("no-autorizado.html");
-                }
-            }
-        %>
-        <%@include file="menuCEL.jsp" %>
-        <h1>info del cel mas una imagen, todo debe quedar centrado, imagen a la izquierda e informacion a la derecha</h1>
-
+           <div class="row">            
+            <div class="col-sm-3 col-md-4">                  
+                <img id="logoUsuario" src="img/logo_alumnos.jpg" style="width:30%; margin-left:70%" >
+            </div>
+            <div class="col-sm-3 col-md-4">
+                <p> Nombre del alumno: "LLENAR CAMPO"</p>
+                <p> Pais: "LLenar Campo"</p>
+                <p>Ciudad: "LLenar Campo"</p>
+                <p>Correo: "LLenar Campo"</p>
+                <p>Telefono: "LLenar Campo"</p>
+            </div>
+        </div>
     </body>
 </html>
